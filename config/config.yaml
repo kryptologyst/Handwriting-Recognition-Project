@@ -1,0 +1,22 @@
+model:
+  name: "microsoft/trocr-base-handwritten"
+  device: "auto"  # auto, cpu, cuda
+  max_length: 256
+
+paths:
+  data_dir: "data"
+  models_dir: "models"
+  output_dir: "output"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+web_app:
+  host: "0.0.0.0"
+  port: 8501
+  title: "Handwriting Recognition"
+
+processing:
+  image_size: [384, 384]
+  batch_size: 1
